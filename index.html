@@ -571,6 +571,21 @@
         text-align: left;
       }
       
+      /* FIX CRÍTICO 1: Garante que o contêiner da barra ocupe 100% da largura em layout de coluna */
+      .bar-container {
+        width: 100%; 
+        flex: none; 
+      }
+
+      /* FIX CRÍTICO 2: Ajuste do tooltip para o layout vertical de smartphone */
+      .bar-tooltip {
+        position: absolute; 
+        top: 30px; /* Posiciona logo abaixo da altura da barra (26px) */
+        left: 50%;
+        transform: translateX(-50%);
+        white-space: nowrap; 
+      }
+      
       .map-container {
         height: 300px;
       }
@@ -751,8 +766,7 @@
     <div class="geographic-map">
       <h3> Distribuição Geográfica das Equipes em Osasco</h3>
       <div class="map-container" id="osascoMap">
-        <!-- Mapa será gerado pelo JavaScript -->
-      </div>
+        </div>
       <div class="map-legend">
         <div class="legend-item">
           <div class="legend-color" style="background-color: #2E86AB;"></div>
@@ -884,8 +898,7 @@
     <div class="chart-container">
       <h3 class="chart-title">Produtividade por Região (serviços/dia)</h3>
       <div class="chart-bars" id="productivityChart">
-        <!-- As barras serão geradas pelo JavaScript -->
-      </div>
+        </div>
     </div>
 
     <div class="highlight-box">
@@ -1028,8 +1041,7 @@
     <div class="chart-container">
       <h3 class="chart-title">Evolução da Produtividade - Comparativo 2019</h3>
       <div class="chart-bars" id="comparisonChart">
-        <!-- As barras serão geradas pelo JavaScript -->
-      </div>
+        </div>
     </div>
 
     <div class="metrics-grid">
